@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "OgrtGuncelle";
+    Layout = "~/Views/Share/_LayoutProgramSorumlusu.cshtml";
+}
+
+@model FİNAL_PROJE.Models.ViewModel
+
+<div id="anasayfa">
+
+    <div class="container">
+
+        <table class="table table-hover table-dark container" style="margin-top:-50px">
+            <thead>
+                <tr>
+                    <th class="col-md-1" scope="col">Adı</th>
+                    <th class="col-md-1" scope="col">Soyadı</th>
+                    <th class="col-md-1" scope="col">Verdiği Ders</th>
+                    <th class="col-md-1" scope="col">ID ders</th>
+                    <th class="col-md-1" scope="col">Telefon</th>
+                    <th class="col-md-1" scope="col">E-Posta</th>
+                    <th class="col-md-1" scope="col">Güncelle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    @{ var i = 0;}
+                    @foreach (var a in Model.OgretmenListesi)
+                    {
+                        <td>@(a.ad)</td>
+                       
+                        <td>@(a.soyad)</td>
+                        
+                        <td>@( a.verdigidersadi)</td>
+                        
+                        <td>@(a.ID_ders)</td>
+                       
+                        <td>@(a.telefon)</td>
+                       
+                        <td>@(a.eposta)</td>
+                        <td> @Html.ActionLink("Güncelle", "Ogrt_guncelle", "ProgramSorumlusu", new { OgretmenID = a.ogretmen_ID }, new { @class = "btn btn-warning" })</td>
+
+                        if (i==0)
+                        {
+                           @:<tr></tr>
+                        }
+                    }
+                </tr>
+                    </tbody>
+                </table>
+            </div>
+           
+        </div>
+

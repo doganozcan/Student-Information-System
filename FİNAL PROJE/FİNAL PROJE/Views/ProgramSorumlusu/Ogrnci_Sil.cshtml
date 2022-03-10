@@ -1,0 +1,49 @@
+﻿@model FİNAL_PROJE.Models.Tables.ogrenci
+@using FİNAL_PROJE.EKLENTİ
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Admin Sistemi</title>
+</head>
+<body>
+    <h2> Silinecek Öğrencinin Bilgileri</h2>
+    <hr />
+    <strong>Öğrenciyi silmek istediğinizden eminmisiniz?</strong>
+    <div style="width:450px">
+        <table class="table table-hover table-light bordeer">
+            <thead>
+                <tr></tr>
+            </thead>
+            <tbody>
+            <td><strong>Adı:</strong>@(Model.ad)</td>
+            <tr></tr>
+            <td><strong>Soyadı</strong>:@(Model.soyad)</td>
+            <tr></tr>
+            <td><strong>Anne Adı:</strong>@(Model.anne_adi)</td>
+            <tr></tr>
+            <td><strong>Baba Adı:</strong>@(Model.baba_adi)</td>
+            <tr></tr>
+            <td><strong>Doğum Tarihi:</strong>@(Model.dogumtarihi)</td>
+            <tr></tr>
+            <td><strong>Cinsiyeti:</strong>@(Model.cinsiyet)</td>
+            <tr></tr>
+            <td><strong>Uyruk:</strong>@(Model.uyruk)</td>
+            <tr></tr>
+            <td><strong>T.C NO:</strong>@(Model.tc)</td>
+            </tbody>
+        </table>
+        @using (Html.BeginForm())
+        {
+            @Html.Submit("Sil", new { @class = "btn  btn-danger" })
+        }
+    </div>
+    <hr />
+    @Html.ActionLink("Anasayfa", "Admin_anasayfa", "ProgramSorumlusu")
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+﻿@model FİNAL_PROJE.Models.Tables.ogrenci
+@using FİNAL_PROJE.EKLENTİ
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Öğrenci Bilgi Sistemi</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        <table class="table table-hover table-light">
+            <thead>
+                <tr></tr>
+            </thead>
+            <tbody>
+                <h5>Aile İletişim Bilgileri</h5>
+                <tr>
+                    <td><div class="input-group mb"><span class="input-group-text" id="basic-addon1">Adres</span>@Html.TextBoxFor(x => x.aile_adres, new { @class = "form-control", placeholder = "Adres", ari_describedy = "basic-addon1" })</div></td>
+                    <td><div class="input-group mb"><span class="input-group-text" id="basic-addon1">İl</span>@Html.TextBoxFor(x => x.aile_il, new { @class = "form-control", placeholder = "İl", ari_describedy = "basic-addon1" })</div></td>
+                </tr>
+                <tr>
+                    <td><div class="input-group mb"><span class="input-group-text" id="basic-addon1">Postakodu</span>@Html.TextBoxFor(x => x.aile_postakodu, new { @class = "form-control", placeholder = "Postakodu", ari_describedy = "basic-addon1" })</td>
+                    <td><div class="input-group mb"><span class="input-group-text" id="basic-addon1">İlçe</span>@Html.TextBoxFor(x => x.aile_ilce, new { @class = "form-control", placeholder = "İlçe", ari_describedy = "basic-addon1" })</div></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br />
+        <table class="table table-hover table-light">
+            <thead>
+                <tr></tr>
+            </thead>
+            <tbody>
+                <h5>İkamet İletişim Bilgileri</h5>
+                <tr>
+                    <td><div class="input-group mb"><span class="input-group-text" id="basic-addon1">Adres</span>@Html.TextBoxFor(x => x.ikamet_adres, new { @class = "form-control", placeholder = "Adres", ari_describedy = "basic-addon1" })</div></td>
+                    <td><div class="input-group mb"><span class="input-group-text" id="basic-addon1">İl</span>@Html.TextBoxFor(x => x.ikamet_il, new { @class = "form-control", placeholder = "İl", ari_describedy = "basic-addon1" })</div></td>
+                </tr>
+                <tr>
+                    <td><div class="input-group mb"><span class="input-group-text" id="basic-addon1">Postakodu</span>@Html.TextBoxFor(x => x.ikamet_postakodu, new { @class = "form-control", placeholder = "Postakodu", ari_describedy = "basic-addon1" })</td>
+                    <td><div class="input-group mb"><span class="input-group-text" id="basic-addon1">İlçe</span>@Html.TextBoxFor(x => x.ikamet_ilce, new { @class = "form-control", placeholder = "İlçe", ari_describedy = "basic-addon1" })</div></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br />
+        <table class="table table-hover table-light">
+            <thead>
+                <tr></tr>
+            </thead>
+            <tbody>
+                <h5>Diğer İletişim Bilgileri</h5>
+                <tr>
+                    <td><div class="input-group mb"><span class="input-group-text" id="basic-addon1">1.Cep Telefonu</span>@Html.TextBoxFor(x => x.cep1, new { @class = "form-control", placeholder = "(SMS için kullanılır) 0 ile başlamamalıdır", ari_describedy = "basic-addon1" })</div></td>
+                    <td><div class="input-group mb"><span class="input-group-text" id="basic-addon1">2.Cep Telefonu</span>@Html.TextBoxFor(x => x.cep2, new { @class = "form-control", placeholder = "Baba Tel", ari_describedy = "basic-addon1" })</div></td>
+                </tr>
+                <tr>
+                    <td><div class="input-group mb"><span class="input-group-text" id="basic-addon1">3.Cep Telefonu</span>@Html.TextBoxFor(x => x.cep3, new { @class = "form-control", placeholder = "Anne Tel", ari_describedy = "basic-addon1" })</td>
+                    <td><div class="input-group mb"><span class="input-group-text" id="basic-addon1">1.E-Posta</span>@Html.TextBoxFor(x => x.eposta1, new { @class = "form-control", placeholder = "E-Posta", ari_describedy = "basic-addon1" })</div></td>
+                    <td><div class="input-group mb"><span class="input-group-text" id="basic-addon1">2.E-Posta</span>@Html.TextBoxFor(x => x.eposta2, new { @class = "form-control", placeholder = "2.E-Posta", ari_describedy = "basic-addon1" })</div></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <br />
+        <table class="table table-hover table-light">
+            <thead>
+                <tr></tr>
+            </thead>
+            <tbody>
+                <h5>İkamet İletişim Bilgileri</h5>
+                <tr>
+                    <td><div class="input-group mb"><span class="input-group-text" id="basic-addon1">Banka Adı</span>@Html.TextBoxFor(x => x.banka_adi, new { @class = "form-control", placeholder = "Banka Adı", ari_describedy = "basic-addon1" })</div></td>
+                    <td><div class="input-group mb"><span class="input-group-text" id="basic-addon1">Şube Adı</span>@Html.TextBoxFor(x => x.sube_adi, new { @class = "form-control", placeholder = "Şube Adı", ari_describedy = "basic-addon1" })</div></td>
+                    <td><div class="input-group mb"><span class="input-group-text" id="basic-addon1">IBAN</span>@Html.TextBoxFor(x => x.iban, new { @class = "form-control", placeholder = "IBAN", ari_describedy = "basic-addon1" })</div></td>
+                </tr>
+                <tr>
+                    <td><div class="input-group mb"><span class="input-group-text" id="basic-addon1">Sube Kodu</span>@Html.TextBoxFor(x => x.sube_kodu, new { @class = "form-control", placeholder = "Şube Kodu", ari_describedy = "basic-addon1" })</td>
+                    <td><div class="input-group mb"><span class="input-group-text" id="basic-addon1">Hesap Numarası</span>@Html.TextBoxFor(x => x.hesap_numarasi, new { @class = "form-control", placeholder = "Hesap Numarası", ari_describedy = "basic-addon1" })</div></td>
+                    <td><div class="input-group mb"><span class="input-group-text" id="basic-addon1">Hesap Sahibi</span>@Html.TextBoxFor(x => x.hesap_adi_soyadi, new { @class = "form-control", placeholder = "H.Sah.Adı Soyadı", ari_describedy = "basic-addon1" })</div></td>
+                </tr>
+            </tbody>
+        </table>
+
+        @Html.Submit("Kaydet", new { @class = "btn  btn-succsess", style = "background-color:orange;margin-left:5px;width:100px" })
+    }
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>
+

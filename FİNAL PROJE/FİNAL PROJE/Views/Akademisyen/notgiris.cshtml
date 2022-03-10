@@ -1,0 +1,90 @@
+﻿
+@{
+    Layout = "~/Views/Share/_LayoutAkademisyen.cshtml";
+}
+@model FİNAL_PROJE.Models.ViewModel
+
+<div id="anasayfa">
+    <h2>Not verilecek Dersler</h2>
+
+    <table class="table table-hover table-dark">
+        <thead>
+            <tr>
+                <th class="col-md-1" scope="col">Ders Kodu</th>
+                <th class="col-md-1" scope="col">Ders Adı</th>
+                <th class="col-md-1" scope="col">Kredi</th>
+                <th class="col-md-1" scope="col">T+U</th>
+                <th class="col-md-1" scope="col">AKTS</th>
+                <th class="col-md-1" scope="col">Sınıf</th>
+                <th class="col-md-1" scope="col">Öğretim Elemanı</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                @{ var i = 0; var j = 0;}
+
+                @foreach (var a in Model.OgretmenListesi)
+                {
+                    if (User.Identity.Name == a.ogretmen_ID.ToString())
+                    {
+                        <td>@(a.ID_ders)</td>
+                        <td>@(a.verdigidersadi)</td>
+                        <td>@(a.dersler.kredi)</td>
+                        <td>@(a.dersler.kredi + "+") @(j = a.dersler.akts - a.dersler.kredi)</td>
+                        <td>@(a.dersler.akts)</td>
+                        <td>@(a.dersler.ders_donemi)</td>
+                        <td>@(a.ad + " " + a.soyad)</td>
+                        if (i == 0)
+                        {
+                        @:</tr><tr>
+                        }
+                    }
+                }
+
+            </tr>
+        </tbody>
+    </table>
+
+
+    <h2>Dersi Alan Öğrenciler</h2>      @Html.ActionLink("Not Gir", "NOTGİRİS", "Akademisyen", new { @class = "btn  btn-light", target = "_blank", style = "font-size:20px;background-color:orange;" })
+
+    <table class="table table-hover table-dark">
+        <thead>
+            <tr>
+                <th class="col-md-1" scope="col">Ders Kodu</th>
+                <th class="col-md-1" scope="col">Ders Adı</th>
+                <th class="col-md-1" scope="col">Kredi</th>
+                <th class="col-md-1" scope="col">AKTS</th>
+                <th class="col-md-1" scope="col">Sınıf</th>
+                <th class="col-md-1" scope="col">Öğrenci Numarası</th>
+                <th class="col-md-1" scope="col">Öğrenci Adı</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                @{ var e = 0; }
+
+                @foreach (var b in Model.AlinandersListesi)
+                {
+                    
+                        <td>@(b.ID_ders)</td>
+                        <td>@(b.alinan_dersadi)</td>
+                        <td>@(b.dersler.kredi)</td>
+                        <td>@(b.dersler.akts)</td>
+                        <td>@(b.dersler.ders_donemi)</td>
+                        <td>@(b.ogrenci.ogrencino)</td>
+                        <td>@(b.ogrenci.ad + " " + b.ogrenci.soyad)</td>
+                        if (e == 0)
+                        {
+                        @:</tr><tr>
+                        }
+                    
+                }
+
+            </tr>
+        </tbody>
+    </table>
+
+
+</div>
+

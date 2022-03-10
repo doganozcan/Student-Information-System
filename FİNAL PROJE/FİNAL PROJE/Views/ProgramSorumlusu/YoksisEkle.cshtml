@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "YoksisEkle";
+    Layout = "~/Views/Share/_LayoutProgramSorumlusu.cshtml";
+}
+
+@model FİNAL_PROJE.Models.Tables.yoksis
+
+<div id="anasayfa" style="margin-top:-59px">
+    @using FİNAL_PROJE.EKLENTİ
+
+    @using (Html.BeginForm())
+    {
+        <table class="table table-hover table-dark table-sm">
+            <thead>
+                <tr>
+                    <th class="col-md-1" scope="col">Fakülte</th>
+                    <th class="col-md-1" scope="col">Bölüm</th>
+                    <th class="col-md-1" scope="col">Öğrenim Türü</th>
+                    <th class="col-md-1" scope="col">Birim Türü</th>
+                    <th class="col-md-1" scope="col">Öğrenim Süresi</th>
+                    <th class="col-md-1" scope="col">Oğrenim Dili</th>
+                    <th class="col-md-1" scope="col">Sınıf</th>
+                    <th class="col-md-1" scope="col">Oğrenim Statü</th>
+                    <th class="col-md-1" scope="col">Hazırlık Durumu</th>
+                    <th class="col-md-1" scope="col">Kayıt Tarihi</th>
+                    <th class="col-md-1" scope="col">Oğrenim Hakkı</th>
+                    <th class="col-md-1" scope="col">Puan Türü</th>
+                    <th class="col-md-1" scope="col">Giriş Türü</th>
+                    <th class="col-md-1" scope="col">Puan</th>
+                    <th class="col-md-1" scope="col">Not Sistemi</th>
+                    <th class="col-md-1" scope="col">Ortalama</th>
+                    <th class="col-md-1" scope="col">Birim Türü</th>
+                    <th class="col-md-1" scope="col">Aktif Dönem</th>
+                    <th class="col-md-1" scope="col">Öğrenci No</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>  @Html.TextBoxFor(x => x.fakulte, new { @class = "form-control ", ari_describedy = "basic-addon1" })</td>
+                    <td>  @Html.TextBoxFor(x => x.bolum, new { @class = "form-control ", ari_describedy = "basic-addon1" })</td>
+                    <td>  @Html.TextBoxFor(x => x.ogrenim_turu, new { @class = "form-control ", ari_describedy = "basic-addon1" })</td>
+                    <td>  @Html.TextBoxFor(x => x.birim_turu, new { @class = "form-control ", ari_describedy = "basic-addon1" })</td>
+                    <td>  @Html.TextBoxFor(x => x.ogrsuresi, new { @class = "form-control ", ari_describedy = "basic-addon1" })</td>
+                    <td>  @Html.TextBoxFor(x => x.ogrdili, new { @class = "form-control ", ari_describedy = "basic-addon1" })</td>
+                    <td>  @Html.TextBoxFor(x => x.sinif, new { @class = "form-control ",  ari_describedy = "basic-addon1" })</td>
+                    <td>  @Html.TextBoxFor(x => x.ogr_statusu, new { @class = "form-control ",  ari_describedy = "basic-addon1" })</td>
+                    <td>  @Html.TextBoxFor(x => x.hazirlikdurumu, new { @class = "form-control ",  ari_describedy = "basic-addon1" })</td>
+                    <td>  @Html.TextBoxFor(x => x.kayittarihi, new { @class = "form-control ",  ari_describedy = "basic-addon1" })</td>
+                    <td>  @Html.TextBoxFor(x => x.ogr_hakki, new { @class = "form-control ",  ari_describedy = "basic-addon1" })</td>
+                    <td>  @Html.TextBoxFor(x => x.giris_puanturu, new { @class = "form-control ", ari_describedy = "basic-addon1" })</td>
+                    <td>  @Html.TextBoxFor(x => x.giristuru, new { @class = "form-control ", ari_describedy = "basic-addon1" })</td>
+                    <td>  @Html.TextBoxFor(x => x.giris_puan, new { @class = "form-control ",  ari_describedy = "basic-addon1" })</td>
+                    <td>  @Html.TextBoxFor(x => x.notsistemi, new { @class = "form-control ", ari_describedy = "basic-addon1" })</td>
+                    <td>  @Html.TextBoxFor(x => x.not_ort, new { @class = "form-control ",  ari_describedy = "basic-addon1" })</td>
+                    <td>  @Html.TextBoxFor(x => x.birim_turu, new { @class = "form-control ",  ari_describedy = "basic-addon1" })</td>
+                    <td>  @Html.TextBoxFor(x => x.aktif_donem, new { @class = "form-control ", ari_describedy = "basic-addon1" })</td>
+                    <td>  @Html.TextBoxFor(x => x.ogrencino, new { @class = "form-control ", ari_describedy = "basic-addon1" })</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <hr />
+        @Html.Submit("KAYDET", new { @class = "btn  btn-light", style = "background-color:orange;margin-left:5px;width:100px" })
+    }
+
+</div>

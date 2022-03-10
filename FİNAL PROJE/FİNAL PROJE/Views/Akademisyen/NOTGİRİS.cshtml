@@ -1,0 +1,63 @@
+﻿@model FİNAL_PROJE.Models.Tables.notlar
+@using FİNAL_PROJE.EKLENTİ
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="~/stiller/anasayfa.css" rel="stylesheet" type="text/css" />
+
+    <title>Öğrenci Bilgi Sistemi</title>
+</head>
+<body>
+
+    @using (Html.BeginForm())
+    {
+        <table class="table table-hover table-dark table-sm">
+            <thead>
+                <tr>
+                    <th class="col-md-1" scope="col">Öğrenci No</th>
+                    <th class="col-md-1" scope="col">Ders Kodu</th>
+                    <th class="col-md-1" scope="col">Vize</th>
+                    <th class="col-md-1" scope="col">Final</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>  @Html.TextBoxFor(x => x.ogrencino, new { @class = "form-control ", placeholder = "Öğrenci No", ari_describedy = "basic-addon1" })</td>
+                    <td>  @Html.TextBoxFor(x => x.ID_ders, new { @class = "form-control ", placeholder = "Ders kodu", ari_describedy = "basic-addon1" })</td>
+                    <td>  @Html.TextBoxFor(x => x.vize, new { @class = "form-control ", placeholder = "Vize", ari_describedy = "basic-addon1" })</td>
+                    <td>  @Html.TextBoxFor(x => x.final, new { @class = "form-control ", placeholder = "Final", ari_describedy = "basic-addon1" })</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <hr />
+        @Html.Submit("KAYDET", new { @class = "btn  btn-light", style = "background-color:orange;margin-left:5px;width:100px" })
+    }
+    <br />
+    <div id="gizle">
+        <div>
+            <button id="btnGizle" type="button" class="close" aria-label="Close" style="margin-left:1209px;background-color:#D1ECF1;>
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+        <p style="color:red"> LÜTFEN BİLGİLERİ NOT GİRİŞİ SAYFASINDAN BAKARAK DOĞRU GİRİNİZ</p>
+
+        <script>
+                var btnGizle = document.getElementById("btnGizle");
+                btnGizle.onclick = function () {
+
+                    //display özelliği none yapılarak gizleme işlemi yapılır.
+                    document.getElementById("gizle").style.display = "none";
+
+                }
+        </script>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,202 @@
+﻿
+@{
+    Layout = "~/Views/Share/_LayoutPage1.cshtml";
+}
+
+@model FİNAL_PROJE.Models.ViewModel
+
+
+
+@using FİNAL_PROJE.EKLENTİ
+
+<div id="anasayfa" style="margin-top:-40px">
+    <h6>DERS KAYIT ÖĞRENCİ BİLGİLERİ</h6>
+    <table class="table table-hover table-dark" style="color:#FFA500">
+        <thead>
+            <tr></tr>
+        </thead>
+        <tbody>
+            <tr>
+                @foreach (var a in Model.YoksisListesi)
+                {
+                    if (User.Identity.Name == a.ogrencino.ToString())
+                    {
+                        <td>@("Öğrenci No / Adı Soyadı: " + a.ogrencino + " / " + a.ogrenci.ad + " " + a.ogrenci.soyad)</td>
+                    <tr></tr>
+                <td>@("Fakülte - Bölüm / Sınıfı: " + a.fakulte + " - " + a.bolum + " / " + a.sinif)</td>
+                <tr></tr>
+                <td>@("Kayıt Tarihi: / Nedeni: " + a.kayittarihi + " / " + a.giristuru)</td>
+                <tr></tr>
+                <td>@("Bağlı Olunan Müfredat: ") @(a.kayittarihi + " " + a.bolum + "Müfredatı")</td>
+                <tr></tr>
+                <td>@("Öğrenim Süresi: " + a.ogrsuresi)</td>
+                <tr></tr>
+                <td>@("Genel Ortalama: " + a.not_ort)</td>
+            }
+
+        }
+
+                </tr>
+                </tbody>
+            </table>
+            @* <i class="fas fa-plus-square"></i> *@
+            @Html.ActionLink("Dersleri Kaydet", "DERS_KAYİT", "obs", new { @class = "btn  btn-light", target = "_blank", style = "font-size:20px;background-color:orange;" })
+            <div>
+                <table class="table table-hover table-dark table-sm">
+                    <thead>
+                        <tr>
+                            <th class="col-md-1" scope="col">Ders Kodu</th>
+                            <th class="col-md-1" scope="col">Ders Adı</th>
+                            <th class="col-md-1" scope="col">Kredi</th>
+                            <th class="col-md-1" scope="col">T+U</th>
+                            <th class="col-md-1" scope="col">AKTS</th>
+                            <th class="col-md-1" scope="col">Ders Dönemi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            @{var i = 0; var j = 0; var k = 0;}
+
+                            @foreach (var a in Model.DersListesi)
+                            {
+
+                                if (User.Identity.Name == a.ogrencino.ToString())
+                                {
+                                    <td>@(a.ID_ders)</td>
+                                    <td>@(a.dersadi)</td>
+                                    <td>@(a.kredi)</td>
+                                    <td>@(a.kredi + "+")@(j = a.akts - a.kredi)</td>
+                                    <td>@(a.akts)</td>
+                                    <td>@(a.ders_donemi)</td>
+                                    
+                                    if (i == 0)
+                                    {
+                                    @:</tr><tr>
+                                    }
+                                }
+                            }
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div>
+                <table class="table table-hover table-dark table-sm">
+                    <thead>
+                        <tr>
+                            <th class="col-md-1" scope="col">Ders Kodu</th>
+                            <th class="col-md-1" scope="col">Öğretim Elemanı</th>
+                            <th class="col-md-1" scope="col">Öğretmen ID</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            @{var l = 0; var m = 0;}
+
+                            @foreach (var a in Model.OgretmenListesi)
+                            {
+
+                                if (User.Identity.Name == a.dersler.ogrencino.ToString())
+                                {
+                                    <td>@(a.ID_ders)</td>
+                                    <td>@(a.ad+" "+a.soyad)</td>
+                                    <td>@(a.ogretmen_ID)</td>
+
+
+                                    if (l == 0)
+                                    {
+                                    @:</tr><tr>
+                                    }
+                                }
+                            }
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+
+            @*<div>
+                    @{float vnotu = 0; float fnotu = 0; float ort = 0; Boolean durum = false; var aa = 0; var ba = 0; var bb = 0; var cb = 0; var cc = 0; var dc = 0; var dd = 0; var d_d = 0; var fd = 0; var ff = 0;}
+                    @foreach (var item in Model.NotlarListesi)
+                    {
+                        //if (item.dersler.ders_donemi == 1.ToString())   //hangi kullanıcı girmişse onun dönemine göre olmalı
+                        //{
+                        if (item.final == null || item.vize == null)
+                        {
+                            durum = true;
+                        }
+                        else
+                        {
+                            durum = false;
+                            vnotu = int.Parse(item.vize);
+                            fnotu = int.Parse(item.final);
+                            ort = (vnotu * 0.4f) + (fnotu * 0.6f);
+                        }
+
+                        if (durum == false)
+                        {
+                            @(toplamkredi)   // burda da kullanıyo dadasdadsa :) çok iyi
+                            <br />
+                            @("Ortalama : " + Math.Round(ort, 0))
+                            if (Math.Round(ort, 0) >= 90 && Math.Round(ort, 0) <= 100)
+                            {
+                                aa = item.dersler.kredi * 4;
+                                @("AA" + aa)
+                            }
+                            else if (Math.Round(ort, 0) >= 85 && Math.Round(ort, 0) <= 89)
+                            {
+                                ba = (item.dersler.kredi * 7) / 2;
+                                @("BA" + ba)
+                            }
+                            else if (Math.Round(ort, 0) >= 70 && Math.Round(ort, 0) <= 84)
+                            {
+                                bb = item.dersler.kredi * 3;
+                                @("BB" + bb)
+                            }
+                            else if (Math.Round(ort, 0) >= 65 && Math.Round(ort, 0) <= 69)
+                            {
+                                cb = (item.dersler.kredi * 5) / 2;
+                                @("CB" + cb)
+                            }
+                            else if (Math.Round(ort, 0) >= 60 && Math.Round(ort, 0) <= 64)
+                            {
+                                cc = item.dersler.kredi * 2;
+                                @("CC" + cc)
+                            }
+                            else if (Math.Round(ort, 0) >= 55 && Math.Round(ort, 0) <= 59)
+                            {
+                                dc = (item.dersler.kredi * 3) / 2;
+                                @("DC" + dc)
+                            }
+                            else if (Math.Round(ort, 0) >= 50 && Math.Round(ort, 0) <= 54)
+                            {
+                                d_d = item.dersler.kredi * 1;
+                                @("DD" + d_d)
+                            }
+                            else if (Math.Round(ort, 0) >= 40 && Math.Round(ort, 0) <= 49)
+                            {
+                                fd = (item.dersler.kredi * 1) / 2;
+                                @("FD" + fd)
+                            }
+                            else if (Math.Round(ort, 0) >= 0 && Math.Round(ort, 0) <= 39)
+                            {
+                                ff = item.dersler.kredi * 0;
+                                @("FF" + ff)
+                            }
+                        }
+                        else
+                        {
+                            @("Ortalama yok")
+                        }
+                    }
+
+
+
+                </div>*@
+
+        </div>
+
+

@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "Ders_GS";
+    Layout = "~/Views/Share/_LayoutProgramSorumlusu.cshtml";
+}
+
+@model FİNAL_PROJE.Models.ViewModel
+
+<div id="anasayfa">
+
+    <div class="container">
+
+        <table class="table table-hover table-dark container" style="margin-top:-50px">
+            <thead>
+                <tr>
+                    <th class="col-md-1" scope="col">ID Ders</th>
+                    <th class="col-md-1" scope="col">Ders Adı</th>
+                    <th class="col-md-1" scope="col">Kredi</th>
+                    <th class="col-md-1" scope="col">Ders Dönemi</th>
+                    <th class="col-md-1" scope="col">AKTS</th>
+                    <th class="col-md-1" scope="col">Der.A.Ogr No</th>
+                    <th class="col-md-1" scope="col">Der.Ver.Öğretmen ID</th>
+                    <th class="col-md-1" scope="col">Güncelle</th>
+                    <th class="col-md-1" scope="col">Sil</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    @{ var i = 0;}
+                    @foreach (var a in Model.DersListesi)
+                    {
+                        <td>@(a.ID_ders)</td>
+
+                        <td>@(a.dersadi)</td>
+
+                        <td>@( a.kredi)</td>
+
+                        <td>@(a.ders_donemi)</td>
+
+                        <td>@(a.akts)</td>
+
+                        <td>@(a.ogrencino)</td>
+
+                        <td>@(a.ogretmen_ID)</td>
+
+                        <td> @Html.ActionLink("Güncelle", "Ders_Guncelle", "ProgramSorumlusu", new { DersID = a.ID_ders }, new { @class = "btn btn-warning" })</td>
+
+                        <td> @Html.ActionLink("Sil", "Ders_Sil", "ProgramSorumlusu", new { DersID = a.ID_ders }, new { @class = "btn btn-danger" })</td>
+
+                        if (i == 0)
+                        {
+                            @:
+<tr></tr>
+                    }
+                }
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>

@@ -1,0 +1,49 @@
+﻿
+@{
+    Layout = "~/Views/Share/_LayoutPage1.cshtml";
+}
+
+@model FİNAL_PROJE.Models.ViewModel
+
+<div id="anasayfa" style="left:300px;top:70px">
+
+    <div>
+        <strong> Danışman Bilgileri</strong>
+        <table class="table table-hover table-light bordeer">
+            <thead>
+                <tr>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    @{var i = 0;}
+                    @foreach (var item in Model.YoksisListesi)
+                    {
+                        foreach (var b in Model.OgretmenListesi)
+                        {
+
+                            if (item.ogrencino.ToString() == User.Identity.Name && b.ID_ders == 9)
+                            {
+                                <td> <strong>Adı Soyadı:</strong> @(b.ad + " " + b.soyad) </td>
+                            <tr></tr>
+                        <td><strong>Fakülte:</strong> @(item.fakulte) </td>
+                        <tr></tr>
+                        <td><strong>Bölüm:</strong> @(item.bolum) </td>
+                        <tr></tr>
+                        <td><strong>Telefon:</strong> @(b.telefon)</td>
+                        <tr></tr>
+                        <td><strong>E-posta:</strong> @(b.eposta)</td>
+
+                    }
+                }
+            }
+
+
+                    </tr>
+                    </tbody>
+                </table>
+    </div>
+
+</div>
+

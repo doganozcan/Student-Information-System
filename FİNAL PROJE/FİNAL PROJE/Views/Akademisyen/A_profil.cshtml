@@ -1,0 +1,39 @@
+﻿
+@{
+    Layout = "~/Views/Share/_LayoutAkademisyen.cshtml";
+}
+
+
+@model FİNAL_PROJE.Models.ViewModel
+
+<div id="anasayfa">
+
+
+    <table class="table table-hover table-primary  container">
+        <thead>
+        <th class="col-sm-8">Öğretmen Profiliniz</th>
+
+        </thead>
+        <tbody>
+            <tr>
+                @foreach (var a in Model.OgretmenListesi)
+                {
+                    <td><strong>@("Öğretmen ID:")</strong> @(a.ogretmen_ID)</td>
+                <tr></tr> @*ALT SATIRA GEÇMEK İÇİN*@
+            <td><strong>@("Adı:")</strong> @(a.ad) </td>
+            <tr></tr>
+            <td><strong>@("Soyadı:")</strong> @(a.soyad)</td>
+            <tr></tr>
+            <td><strong>@("Verdiği Ders Adı:")</strong> @(a.verdigidersadi)</td>
+            <tr></tr>
+            <td><strong>@("Ders ID:")</strong> @(a.ID_ders)</td>
+            <tr></tr>
+            <td><strong>@("Telefon:")</strong> @(a.telefon)</td>
+            <tr></tr>
+            <td><strong>@("E-posta:")</strong> @(a.eposta)</td>
+        }
+                </tr>
+                </tbody>
+            </table>
+
+        </div>

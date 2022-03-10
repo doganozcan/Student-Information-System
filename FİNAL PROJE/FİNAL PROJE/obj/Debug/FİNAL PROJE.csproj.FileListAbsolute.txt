@@ -1,0 +1,156 @@
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\FİNAL PROJE.dll.config
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\FİNAL PROJE.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\FİNAL PROJE.pdb
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\csc.exe
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\csc.exe.config
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\csc.rsp
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\csi.exe
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\csi.exe.config
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\csi.rsp
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.AppContext.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.Console.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.IO.Compression.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.Net.Http.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.ValueTuple.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\vbc.exe
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\vbc.exe.config
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\vbc.rsp
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\VBCSCompiler.exe
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\EntityFramework.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\EntityFramework.SqlServer.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\FakeData.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\System.Web.Helpers.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\System.Web.Mvc.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\System.Web.Razor.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\System.Web.WebPages.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\System.Web.WebPages.Razor.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\EntityFramework.xml
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\EntityFramework.SqlServer.xml
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\FakeData.pdb
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\System.Web.Helpers.xml
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\System.Web.Mvc.xml
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\System.Web.Razor.xml
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\System.Web.WebPages.xml
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\bin\System.Web.WebPages.Razor.xml
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\obj\Debug\FİNAL PROJE.csproj.CoreCompileInputs.cache
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\obj\Debug\FİNAL PROJE.csproj.CopyComplete
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\obj\Debug\FİNAL PROJE.dll
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\obj\Debug\FİNAL PROJE.pdb
+C:\Users\Doğan\source\repos\FİNAL PROJE\FİNAL PROJE\obj\Debug\FİNAL PROJE.csprojAssemblyReference.cache
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\FİNAL PROJE.dll.config
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\FİNAL PROJE.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\FİNAL PROJE.pdb
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\csc.exe
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\csc.exe.config
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\csc.rsp
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\csi.exe
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\csi.exe.config
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\csi.rsp
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.AppContext.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.Console.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.IO.Compression.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.Net.Http.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.ValueTuple.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\vbc.exe
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\vbc.exe.config
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\vbc.rsp
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\VBCSCompiler.exe
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\EntityFramework.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\EntityFramework.SqlServer.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\FakeData.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\System.Web.Helpers.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\System.Web.Mvc.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\System.Web.Razor.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\System.Web.WebPages.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\System.Web.WebPages.Razor.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\EntityFramework.xml
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\EntityFramework.SqlServer.xml
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\FakeData.pdb
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\System.Web.Helpers.xml
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\System.Web.Mvc.xml
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\System.Web.Razor.xml
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\System.Web.WebPages.xml
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\bin\System.Web.WebPages.Razor.xml
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\obj\Debug\FİNAL PROJE.csproj.AssemblyReference.cache
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\obj\Debug\FİNAL PROJE.csproj.CoreCompileInputs.cache
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\obj\Debug\FİNAL PROJE.csproj.CopyComplete
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\obj\Debug\FİNAL PROJE.dll
+C:\Users\Dogan\Desktop\Githuba Yüklenecek Projeler\FİNAL PROJE\FİNAL PROJE\obj\Debug\FİNAL PROJE.pdb

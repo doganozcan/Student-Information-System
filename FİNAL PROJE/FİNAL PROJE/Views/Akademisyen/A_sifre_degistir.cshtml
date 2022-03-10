@@ -1,0 +1,60 @@
+﻿
+@{
+    Layout = "~/Views/Share/_LayoutAkademisyen.cshtml";
+}
+
+@model FİNAL_PROJE.Models.Tables.ogretmen
+@using FİNAL_PROJE.EKLENTİ
+
+<div id="anasayfa" class="container">
+
+    @if (ViewBag.uyarı != null)
+    {
+        <div class="alert alert-danger" role="alert">@ViewBag.uyarı</div>
+    }
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Eski Şifre</span>
+        @Html.TextBox("sifre", "", new { @class = "form-control ", placeholder = "Eski Şifre", type = "password", ari_describedy = "basic-addon1" })
+    </div>
+
+
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Yeni Şifre</span>
+        @Html.TextBox("yenisifre", "", new { @class = "form-control ", placeholder = "Şifre", type = "password", ari_describedy = "basic-addon1" })
+    </div>
+
+
+
+    @using (Html.BeginForm())
+    {
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Yeni Şifrer Tekrar</span>
+            @Html.TextBoxFor(x=>x.Asifre, new { @class = "form-control ", placeholder = "Şifre", type = "password", ari_describedy = "basic-addon1" })
+        </div>
+
+        <hr />
+        @Html.CheckBox("kontrol", new { id = "chcbox" }) <p>Şifremin güvenliği tarafıma ait olup, bu şifre kullanılarak öğrenci otomasyon sistemi üzerinde yapılan tüm işlemlerin sorumluluğunun tarafıma ait olduğunu kabul eder , şifremi kimse ile paylaşmayacağımı taahhüt ederim</p>
+        <br />
+
+        @Html.Submit("Kaydet", new { @class = "btn  btn-light", id = "sendbtn", disabled = "disabled", style = "background-color:orange;margin-left:5px;width:100px" })
+
+    }
+
+    <script>
+        $('#chcbox').change(function () {
+            var result = $(this).is(':checked');
+            if (result) {
+                $('#sendbtn').removeAttr('disabled');
+            }
+            else {
+                $('#sendbtn').attr('disabled', 'disable');
+            }
+
+        });
+    </script>
+
+</div>
+
+

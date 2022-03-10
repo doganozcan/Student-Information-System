@@ -1,0 +1,183 @@
+﻿
+@{
+    Layout = "~/Views/Share/_LayoutPage1.cshtml";
+}
+
+@model FİNAL_PROJE.Models.ViewModel
+@using FİNAL_PROJE.EKLENTİ
+
+<div id="anasayfa">
+    <h2>
+        Hoş Geldin,@foreach (var item in Model.OgrenciListesi)
+        {
+            if (item.ogrencino.ToString() == User.Identity.Name)
+            {
+                @(item.ad + " " + item.soyad)
+            }
+        }
+    </h2>
+
+    @using (Html.BeginForm())
+    {
+        @Html.Submit("Çıkış", new { @class="btn btn-danger"})
+    }
+
+    @*margin-right:165px;*@
+    <div id="kutucuk">
+        <div>
+            <center>Öğrenim Bilgileri</center>
+            <br />
+            <center>
+                @foreach (var a in Model.YoksisListesi)
+                {
+                    @(a.fakulte + "/" + a.bolum)
+                    <br />
+                    <br />
+                    @(a.sinif + ".sınıf")
+                }
+
+            </center>
+        </div>
+    </div>
+
+    @*margin-right:170px;*@
+    <div id="kutucuk">
+        <center>Danışman Bilgileri</center>
+        <br />
+        <center>
+            @foreach (var a in Model.OgretmenListesi)
+            {
+                if ((a.ID_ders ==30 || a.ID_ders==9) && User.Identity.Name==a.dersler.ogrencino.ToString())
+                {
+                        @(a.ad + " " + a.soyad)     
+                }
+            }
+            <br />
+            <br />
+
+            @Html.ActionLink("Detay", "danisman", "obs", new { @style = "text-decoration: none; color:orange;" }) <i class="fa fa-arrow-circle-right"></i>
+        </center>
+    </div>
+
+    <div id="kutucuk">
+        <center>Genel Ortalama</center>
+        <br />
+        <center>
+            @{float alderskredi = 0; float toplamkredi = 0; float vnotu = 0; float fnotu = 0; float ort = 0; Boolean durum = false; var aa = 0; var ba = 0; var bb = 0; var cb = 0; var cc = 0; var dc = 0; var dd = 0; var d_d = 0; var fd = 0; var ff = 0;}
+            @foreach (var item in Model.NotlarListesi)
+            {
+                if (item.dersler.ogrencino.ToString() == User.Identity.Name)   //hangi kullanıcı girmişse onun dönemine göre olmalı
+                {
+                    if (item.final == null || item.vize == null)
+                    {
+                        durum = true;
+                    }
+                    else
+                    {
+                        durum = false;
+                        vnotu = int.Parse(item.vize);
+                        fnotu = int.Parse(item.final);
+                        ort = (vnotu * 0.4f) + (fnotu * 0.6f);
+                    }
+
+                    if (durum == false)
+                    {
+                        toplamkredi += item.dersler.kredi;
+
+                        if (Math.Round(ort, 0) >= 90 && Math.Round(ort, 0) <= 100)
+                        {
+                            aa = item.dersler.kredi * 4;
+                            alderskredi += aa;
+                        }
+                        else if (Math.Round(ort, 0) >= 85 && Math.Round(ort, 0) <= 89)
+                        {
+                            ba = (item.dersler.kredi * 7) / 2;
+                            alderskredi += ba;
+                        }
+                        else if (Math.Round(ort, 0) >= 70 && Math.Round(ort, 0) <= 84)
+                        {
+                            bb = item.dersler.kredi * 3;
+                            alderskredi += bb;
+                        }
+                        else if (Math.Round(ort, 0) >= 65 && Math.Round(ort, 0) <= 69)
+                        {
+                            cb = (item.dersler.kredi * 5) / 2;
+                            alderskredi += cb;
+                        }
+                        else if (Math.Round(ort, 0) >= 60 && Math.Round(ort, 0) <= 64)
+                        {
+                            cc = item.dersler.kredi * 2;
+                            alderskredi += cc;
+                        }
+                        else if (Math.Round(ort, 0) >= 55 && Math.Round(ort, 0) <= 59)
+                        {
+                            dc = (item.dersler.kredi * 3) / 2;
+                            alderskredi += dc;
+                        }
+                        else if (Math.Round(ort, 0) >= 50 && Math.Round(ort, 0) <= 54)
+                        {
+                            d_d = item.dersler.kredi * 1;
+                            alderskredi += d_d;
+                        }
+                        else if (Math.Round(ort, 0) >= 40 && Math.Round(ort, 0) <= 49)
+                        {
+                            fd = (item.dersler.kredi * 1) / 2;
+                            alderskredi += fd;
+                        }
+                        else if (Math.Round(ort, 0) >= 0 && Math.Round(ort, 0) <= 39)
+                        {
+                            ff = item.dersler.kredi * 0;
+                            alderskredi += ff;
+                        }
+                    }
+                    else
+                    {
+                        @("Ortalama yok ")
+                       
+                    }
+                }
+            }
+            @if (toplamkredi != 0)
+            {
+                @("Ortalama: " +Math.Round(alderskredi / toplamkredi,0))
+            }
+        </center>
+    </div>
+
+    <div style="width:290px;float:left">
+        <table class="table table-hover table-dark table-sm">
+            <thead>
+                <tr>
+                    <th class="col-md-1" scope="col">Başlık</th>
+                    <th class="col-md-1" scope="col">Tarih</th>
+                    <th class="col-md-1" scope="col">@*oku yazısı için*@</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    @{ var i = 0;}
+
+                    @foreach (var a in Model.DuyuruListesi)
+                    {
+                            if (a.ID_alinandersler == a.ogretmen.ID_ders && a.dersler.ogrencino.ToString()==User.Identity.Name)
+                            {
+                                <td>@(a.baslik)</td>
+
+                                <td>@(a.tarih)</td>
+
+                                <td>@Html.ActionLink("Oku", "duyuru", "obs", new { @style = "color:orange" })</td>
+
+                                if (i == 0)
+                                {
+                                @:</tr><tr>
+                                }
+                        }
+                    }
+
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+</div>

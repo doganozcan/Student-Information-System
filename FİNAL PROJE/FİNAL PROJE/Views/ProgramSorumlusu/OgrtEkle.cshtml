@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "OgrtEkle";
+    Layout = "~/Views/Share/_LayoutProgramSorumlusu.cshtml";
+}
+
+@model FİNAL_PROJE.Models.Tables.ogretmen
+
+@using FİNAL_PROJE.EKLENTİ
+
+
+<div id="anasayfa" style="margin-top:-50px">
+    <h2>Akademisyen Kaydı</h2>
+    <hr />
+    @using (Html.BeginForm())
+    {
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Adı</span>
+            @Html.TextBoxFor(x => x.ad, new { @class = "form-control ", placeholder = "Ad", ari_describedy = "basic-addon1" })
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Soyadı</span>
+            @Html.TextBoxFor(x => x.soyad, new { @class = "form-control ", placeholder = "Soyad", ari_describedy = "basic-addon1" })
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Verdiği Ders Adı</span>
+            @Html.TextBoxFor(x => x.verdigidersadi, new { @class = "form-control ", placeholder = "Ders Adı", ari_describedy = "basic-addon1" })
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">ID Ders</span>
+            @Html.TextBoxFor(x => x.ID_ders, new { @class = "form-control ", placeholder = "ID Ders", ari_describedy = "basic-addon1" })
+        </div>
+
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Telefon</span>
+            @Html.TextBoxFor(x => x.telefon, new { @class = "form-control ", placeholder = "Telefon", ari_describedy = "basic-addon1" })
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">E-Posta</span>
+            @Html.TextBoxFor(x => x.eposta, new { @class = "form-control ", placeholder = "E-Posta", ari_describedy = "basic-addon1" })
+        </div>
+
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Kullanıcı Adı</span>
+            @Html.TextBoxFor(x => x.Akullanici_adi, new { @class = "form-control ", placeholder = "Kullanıcı Adı", ari_describedy = "basic-addon1" })
+        </div>
+
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Şifre</span>
+            @Html.TextBoxFor(x => x.Asifre, new { @class = "form-control ", placeholder = "Şifre", ari_describedy = "basic-addon1" })
+        </div>
+
+        <hr />
+        @Html.Submit("KAYDET", new { @class = "btn  btn-light", style = "background-color:orange;margin-left:5px;width:100px" })
+    }
+
+</div>
+

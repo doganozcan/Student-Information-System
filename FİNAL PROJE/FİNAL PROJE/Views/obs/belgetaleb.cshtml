@@ -1,0 +1,49 @@
+﻿
+@{
+    Layout = "~/Views/Share/_LayoutPage1.cshtml";
+}
+
+@model FİNAL_PROJE.Models.Tables.belgetalep
+
+@using FİNAL_PROJE.EKLENTİ
+
+
+<div id="anasayfa" style="margin-top:-50px">
+    <h2>Belge Talebi</h2>
+    <hr />
+    @using (Html.BeginForm())
+    {
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Talep Eden Kurum Adı</span>
+            @Html.TextBoxFor(x => x.talepeden_kurum, new { @class = "form-control ", placeholder = "KURUM ADI", aria_label = "Talep Eden Kurum Adı", ari_describedy = "basic-addon1" })
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Talep Nedeni</span>
+            @Html.TextBoxFor(x => x.talep_neden, new { @class = "form-control ", placeholder = "TALEP NEDENİ", aria_label = "Talep Nedeni", ari_describedy = "basic-addon1" })
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Belge Türü</span>
+            @Html.TextBoxFor(x => x.belge_türü, new { @class = "form-control ", placeholder = "ELEKTRONİK/ISLAK İMZA", aria_label = "Belge Türü", ari_describedy = "basic-addon1" })
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Belge Tipi</span>
+            @Html.TextBoxFor(x => x.belge_tipi, new { @class = "form-control ", placeholder = "ÖĞRENCİ/TRANSKRİPT BELGESİ", aria_label = "Belge Tipi", ari_describedy = "basic-addon1" })
+        </div>
+
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Tarih</span>
+            @Html.TextBoxFor(x => x.tarih, new { @class = "form-control ", placeholder = "Tarihi Girin", aria_label = "Tarih", ari_describedy = "basic-addon1" })
+        </div>
+
+
+        <hr />
+        @Html.Submit("Talep Et", new { @class = "btn  btn-light", style = "background-color:orange;margin-left:5px;width:100px" })
+    }
+
+    @Html.ActionLink("Belge Durum", "BelgeTalepListe", "obs", new { @class = "btn btn-light", style = "background-color:orange;margin-top:-66px;margin-left:200px;" })
+
+</div>

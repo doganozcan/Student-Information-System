@@ -1,0 +1,22 @@
+﻿
+@{
+    Layout = "~/Views/Share/_LayoutAkademisyen.cshtml";
+}
+
+@model FİNAL_PROJE.Models.ViewModel
+@using FİNAL_PROJE.EKLENTİ
+
+<div id="anasayfa">
+
+    @foreach (var item in Model.OgretmenListesi)
+    {
+        if (item.ogretmen_ID.ToString() == User.Identity.Name)
+        {
+            <h2>Hoşgeldin,@(item.ad + " " + item.soyad)</h2>
+        }
+    }
+    @using (Html.BeginForm())
+    {
+        @Html.Submit("Çıkış", new { @class = "btn btn-danger", style = "width:255px;height:30px;margin-top:5px" })
+    }
+</div>

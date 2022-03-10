@@ -1,0 +1,39 @@
+﻿
+@{
+    Layout = "~/Views/Share/_LayoutPage1.cshtml";
+}
+
+@model FİNAL_PROJE.Models.ViewModel
+
+<div id="anasayfa">
+
+    <table class="table table-hover table-dark">
+        <thead>
+            <tr>
+                <th class="col-md-1" scope="col">Tarih</th>
+                <th class="col-md-1" scope="col">Belge Türü</th>
+                <th class="col-md-1" scope="col">Belge Tipi</th>
+                <th class="col-md-1" scope="col">Belge Durumu</th>
+                <th class="col-md-1" scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                @{ var i = 0;}
+                @foreach (var a in Model.BelgeListesi)
+                {
+                    <td>@(a.tarih)</td>
+                    <td>@(a.belge_türü)</td>
+                    <td>@(a.belge_tipi)</td>
+                    <td>Onay Bekliyor</td>
+                    <td></td>
+                    if (i == 0)
+                    {
+                    @:</tr><tr>
+                    }
+                }
+            </tr>
+        </tbody>
+    </table>
+
+</div>

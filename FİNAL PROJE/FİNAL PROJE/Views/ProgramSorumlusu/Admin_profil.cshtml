@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Admin_profil";
+    Layout = "~/Views/Share/_LayoutProgramSorumlusu.cshtml";
+}
+
+
+@model FİNAL_PROJE.Models.ViewModel
+
+<div id="anasayfa">
+
+
+    <table class="table table-hover table-primary  container">
+        <thead>
+        <th class="col-sm-8">Öğretmen Profiliniz</th>
+
+        </thead>
+        <tbody>
+            <tr>
+                @foreach (var a in Model.AdminListesi)
+                {
+                    if (User.Identity.Name == a.ID_admin.ToString())
+                    {
+                        <td><strong>@("Admin ID:")</strong> @(a.ID_admin)</td>
+                    <tr></tr> @*ALT SATIRA GEÇMEK İÇİN*@
+                <td><strong>@("Adı:")</strong> @(a.admin_ad) </td>
+                <tr></tr>
+                <td><strong>@("Soyadı:")</strong> @(a.admin_soyad)</td>
+                <tr></tr>
+                <td><strong>@("Telefon:")</strong> @(a.telefon)</td>
+                <tr></tr>
+                <td><strong>@("E-Posta:")</strong> @(a.eposta)</td>
+                <tr></tr>
+            }
+        }
+                </tr>
+                </tbody>
+            </table>
+
+        </div>

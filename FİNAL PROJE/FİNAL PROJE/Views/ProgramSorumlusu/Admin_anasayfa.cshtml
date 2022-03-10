@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Admin_anasayfa";
+    Layout = "~/Views/Share/_LayoutProgramSorumlusu.cshtml";
+}
+
+@using FİNAL_PROJE.EKLENTİ
+
+@using (Html.BeginForm())
+{
+    @Html.Submit("Çıkış", new { @class = "btn btn-danger" })
+}
+
+@model FİNAL_PROJE.Models.ViewModel
+
+<div id="anasayfa">
+    <h2>
+        Hoş Geldin,@foreach (var item in Model.AdminListesi)
+        {
+            @(item.admin_ad + " " + item.admin_soyad)
+        }
+    </h2>
+    <br />
+    @using (Html.BeginForm())
+    {
+        @Html.Submit("Çıkış", new { @class = "btn btn-danger", style = "width:255px;height:30px;margin-top:5px" })
+    }
+
+</div>

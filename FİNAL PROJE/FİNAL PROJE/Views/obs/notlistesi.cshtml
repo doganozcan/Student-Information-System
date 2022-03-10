@@ -1,0 +1,157 @@
+﻿
+@{
+    Layout = "~/Views/Share/_LayoutPage1.cshtml";
+}
+
+@model FİNAL_PROJE.Models.ViewModel
+
+<div id="anasayfa">
+
+
+    <table class="table table-hover table-dark">
+        <thead>
+            <tr>
+                <th class="col-md-1" scope="col">Ders Kodu</th>
+                <th class="col-md-1" scope="col">S.Durum</th>
+                <th class="col-md-1" scope="col">Ders Adı</th>
+                <th class="col-md-1" scope="col">Kredi</th>
+                <th class="col-md-1" scope="col">Sınav Notları</th>
+                <th class="col-md-1" scope="col">Ortalama</th>
+                <th class="col-md-1" scope="col">Not</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                @{ var i = 0; float vnotu = 0; float fnotu = 0; float ort = 0; Boolean durum = false;}
+                @foreach (var a in Model.NotlarListesi)
+                {
+                    if (a.dersler.ogrencino.ToString() == User.Identity.Name)
+                    {
+                        <td>@a.dersler.ID_ders</td>
+                        if (a.final == null)
+                        {
+                            <td style="color:red">Sonuçlandırılmadı</td>
+                        }
+                        else
+                        {
+                            <td>Sonuçlandırıldı</td>}
+                        <td>@a.dersler.dersadi </td>
+                        <td>@a.dersler.kredi </td>
+                        <td>@("Vize:" + a.vize + " " + "Final:" + a.final)</td>
+
+                        if (a.final == null || a.vize == null)
+                        {
+                            durum = true;
+                        }
+                        else
+                        {
+                            durum = false;
+                            vnotu = int.Parse(a.vize); fnotu = int.Parse(a.final);
+                            ort = (vnotu * 0.4f) + (fnotu * 0.6f);
+
+                        }
+
+                        <td>
+                            @if (durum == false)
+                            {
+                                @("Ortalama:" + Math.Round(ort, 0))
+                            }
+                            else { }
+                        </td>
+
+                        // HARF SİSTEMİ KODU
+                        <td>
+                            @if (a.final != null)
+                            {
+                                if (Math.Round(ort, 0) >= 90 && Math.Round(ort, 0) <= 100)
+                                {
+                                    @("AA")
+                                }
+                                else if (Math.Round(ort, 0) >= 85 && Math.Round(ort, 0) <= 89)
+                                {
+                                    @("BA")
+                                }
+                                else if (Math.Round(ort, 0) >= 70 && Math.Round(ort, 0) <= 84)
+                                {
+                                    @("BB")
+                                }
+                                else if (Math.Round(ort, 0) >= 65 && Math.Round(ort, 0) <= 69)
+                                {
+                                    @("CB")
+                                }
+                                else if (Math.Round(ort, 0) >= 60 && Math.Round(ort, 0) <= 64)
+                                {
+                                    @("CC")
+                                }
+                                else if (Math.Round(ort, 0) >= 55 && Math.Round(ort, 0) <= 59)
+                                {
+                                    @("DC")
+                                }
+                                else if (Math.Round(ort, 0) >= 50 && Math.Round(ort, 0) <= 54)
+                                {
+                                    @("DD")
+                                }
+                                else if (Math.Round(ort, 0) >= 40 && Math.Round(ort, 0) <= 49)
+                                {
+                                    @("FD")
+                                }
+                                else if (Math.Round(ort, 0) >= 0 && Math.Round(ort, 0) <= 39)
+                                {
+                                    @("FF")
+                                }
+                            }
+
+                        </td>
+                    }
+
+                    if (i == 0)
+                    {
+                    @:</tr><tr>
+                    }
+                }
+            </tr>
+        </tbody>
+    </table>
+
+    <div id="gizle">
+        <div>
+            <button id="btnGizle" type="button" class="close" aria-label="Close" style="margin-left:1209px;background-color:#D1ECF1;>
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <u style="color:purple"> Notlar</u>
+        <p style="color:red"> (Ders Sonuçlandırılmadı olarak görüntülenmesi) Ne anlama geliyor:</p>
+
+        <div style="color:#000080">
+            <p>
+                1-Yarıyıl sonu sınavı notu henüz girilmedi <br /> <br />
+                3- Not girişi tamamlanmayan bütünleme sınavı mevcut <br /> <br />
+                4- Bütünleme sınav notları girildi fakat henüz harf notu hesaplanmadı
+            </p>
+        </div>
+
+        <p style="color:#004FFB">Harf Notunun "boş" olarak görünmesi ne anlama geliyor:</p>
+
+        <div style="color:#000080">
+            <p>
+                1) Akademik takvime göre harf notlarının ilan tarihi bekleniyor (Akademik takvimden ilgili tarihleri kontrol edebilirsiniz) <br /><br />
+                2) Ders sonuçlandırılmamış/ilan edilmemiş olabilir <br /> <br />
+                3) Derse ait bütünleme sınavı tanımlanmış ise Akademik Takvimde yer alan bütünleme ilan tarihi beklenir
+            </p>
+        </div>
+
+
+        <script>
+            var btnGizle = document.getElementById("btnGizle");
+            btnGizle.onclick = function () {
+
+                //display özelliği none yapılarak gizleme işlemi yapılır.
+                document.getElementById("gizle").style.display = "none";
+
+            }
+        </script>
+    </div>
+
+
+
+</div>

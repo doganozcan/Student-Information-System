@@ -1,0 +1,76 @@
+﻿
+@{
+    Layout = "~/Views/Share/_LayoutPage1.cshtml";
+}
+@model FİNAL_PROJE.Models.ViewModel
+
+<div id="anasayfa">
+
+    <div class="container">
+
+        <table class="table table-hover table-dark container" style="margin-top:-50px">
+            <thead>
+            <th class="col-sm-8">YÖKSİS'e Kayıtlı Aktif Öğrenim Bilgileri</th>
+
+            </thead>
+            <tbody>
+                <tr>
+                    @foreach (var a in Model.YoksisListesi)
+                    {
+                        if (User.Identity.Name == a.ogrencino.ToString())
+                        {
+                            <td><strong>@("Öğrenci No:")</strong> @(a.ogrenci.ogrencino)</td>
+                            <td><strong>@("Fakülte:")</strong> @(a.fakulte)</td>
+                            <td><strong>@("1.Cep Telefonu:")</strong> @(a.ogrenci.cep1)</td>
+
+
+                        <tr></tr> @*ALT SATIRA GEÇMEK İÇİN*@
+                    <td><strong>@("Adı Soyadı:")</strong> @(a.ogrenci.ad + " " + a.ogrenci.soyad) </td>
+                    <td><strong>@("Bölüm:")</strong> @(a.bolum)</td>
+                    <td><strong>@("2.Cep Telefonu:")</strong> @(a.ogrenci.cep2)</td>
+                    <tr></tr>
+                    <td><strong>@("Kayıt Tarihi:")</strong> @(a.kayittarihi)</td>
+                    <td><strong>@("Program:")</strong> @(a.bolum)</td>
+                    <td><strong>@("3.Cep Telefonu:")</strong> @(a.ogrenci.cep3)</td>
+                    <tr></tr>
+                    <td><strong>@("Kayıt Nedeni:")</strong> @(a.giristuru)</td>
+                    <td><strong>@("Sınıf:")</strong> @(a.sinif)</td>
+                    <td><strong>@("1.E-Posta:")</strong> @(a.ogrenci.eposta1)</td>
+                    <tr></tr>
+                    <td><strong>@("Aile Adres:")</strong> @(a.ogrenci.aile_adres)</td>
+                    <td><strong>@("İl:")</strong> @(a.ogrenci.aile_il)</td>
+                    <td><strong>@("2.E-Posta:")</strong> @(a.ogrenci.eposta2)</td>
+                    <tr></tr>
+                    <td><strong>@("Posta Kodu:")</strong> @(a.ogrenci.aile_postakodu)</td>
+                    <td><strong>@("İlçe:")</strong> @(a.ogrenci.aile_ilce)</td>
+                    <td><strong>@("Banka Adı:")</strong> @(a.ogrenci.banka_adi)</td>
+                    <tr></tr>
+                    <td><strong>@("İkamet Adres:")</strong> @(a.ogrenci.ikamet_adres)</td>
+                    <td><strong>@("İkamet İl:")</strong> @(a.ogrenci.ikamet_il)</td>
+                    <td><strong>@("Şube Kodu:")</strong> @(a.ogrenci.sube_kodu)</td>
+                    <tr></tr>
+                    <td><strong>@("İkamet Posta Kodu:")</strong> @(a.ogrenci.ikamet_postakodu)</td>
+                    <td><strong>@("İkamet İlçe:")</strong> @(a.ogrenci.ikamet_ilce)</td>
+                    <td><strong>@("Şube Adı:")</strong> @(a.ogrenci.sube_adi)</td>
+                    <tr></tr>
+                    <td><strong>@("Öğrenci No:")</strong> @(a.ogrenci.ogrencino)</td>
+                    <td><strong>@("Hazırlık:")</strong> @(a.hazirlikdurumu)</td>
+                    <td><strong>@("Hesap Numarası:")</strong> @(a.ogrenci.hesap_numarasi)</td>
+                    <tr></tr>
+                    <td></td>
+                    <td></td>
+                    <td><strong>@("İBAN:") </strong>@(a.ogrenci.iban)</td>
+                    <tr></tr>
+                    <td></td>
+                    <td></td>
+                    <td><strong>@("H. Sah. Adı Soyadı:") </strong>@(a.ogrenci.hesap_adi_soyadi)</td>
+
+                }
+            }
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            @Html.ActionLink("Güncelle", "guncelle", "islem", new { OgrncNo = User.Identity.Name }, new { @class = "btn btn-warning"})
+        </div>
+

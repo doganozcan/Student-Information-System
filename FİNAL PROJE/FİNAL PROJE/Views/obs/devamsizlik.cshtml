@@ -1,0 +1,43 @@
+﻿
+@{
+    Layout = "~/Views/Share/_LayoutPage1.cshtml";
+}
+
+@model FİNAL_PROJE.Models.ViewModel
+
+<div id="anasayfa">
+
+    <table class="table table-hover table-dark">
+        <thead>
+            <tr>
+                <th class="col-md-1" scope="col">Ders Kodu</th>
+                <th class="col-md-1" scope="col">Ders Adı</th>
+                <th class="col-md-1" scope="col">Öğretim Elemanı</th>
+                <th class="col-md-1" scope="col">Devamsızlık</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                @{ var i = 0; var j = 0;}
+
+                @foreach (var a in Model.DevamsizlikListesi)
+                {
+                    if (User.Identity.Name == a.ogrencino.ToString())
+                    {
+                        <td>@(a.ogretmen.ID_ders)</td>
+                        <td>@(a.ogretmen.verdigidersadi)</td>
+                        <td>@(a.ogretmen.ad + " " + a.ogretmen.soyad)</td>
+                        <td>@("Teorik: " + a.teorik + " " + "Uygulama: " + a.uygulama)</td>
+
+                        if (i == 0)
+                        {
+                        @:</tr><tr>
+                        }
+                    }
+                }
+
+            </tr>
+        </tbody>
+    </table>
+
+</div>

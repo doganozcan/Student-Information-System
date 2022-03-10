@@ -1,0 +1,139 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="~/stiller/anasayfa.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" type="image/png" href="~/AppData/logo.jpg" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.js"
+            integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM="
+            crossorigin="anonymous"></script>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <title>Akademisyen İşlemleri</title>
+</head>
+<body>
+
+
+    <div id="bar">
+        <ul class="nav justify-content-end navbar navbar-dark" style="background-color: #111111;">
+            <!-- Öğrenci bilgisi veçıkış için dropdawn-->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:orange">
+                    <img src="~/AppData/profil4.jpg" class="rounded-circle" id="ogrenciresim" style="width:30px;height:30px;">@("Öğretmen ID:") @User.Identity.Name
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <div class="card" style="width: 18rem; background-color:black; color:white">
+                        <center><img src="~/AppData/profil2.png" class="rounded-circle" id="ogrenciresim"></center>
+                        <br />
+                        <strong style="text-align:center">Öğretmen ID: @HttpContext.Current.User.Identity.Name  </strong>
+                        <br />
+                        <p style="text-align:center"><strong>ÖZCAN KOLEJLERİ</strong></p>
+                        <hr />
+                        <div class="card-body">
+                            <div class="d-grid gap-2">
+                                <div class="d-grid gap-2">
+                                    <button style="background-color:orange" type="button" onclick="window.location.href='A_profil'" value="Link"> <i class="fas fa-user"></i><strong>  Profil</strong></button>
+                                    @*@Html.Partial("_PartialPage1")*@
+                                </div>
+                            </div>
+                            <br />
+
+                        </div>
+                    </div>
+                </ul>
+            </li>
+            div
+
+            <li class="nav-item">
+                <a class="nav-link" href="Akademisyen_anasayfa" style="color:orange;">
+                    <i style="font-size:18px;color:orange" class="fas fa-home"></i>
+                </a>
+            </li>
+            <div style="width:50px"></div>
+        </ul>
+
+
+
+
+        <div class="sidenav">
+            <a href="Akademisyen_anasayfa"> <img src="~/AppData/logo2.jpg" alt="Anasayfa" id="logo" /></a>
+            <hr style="color:white; " />
+            <p> <strong style="color:white; position:relative; right:-50px;">AKADEMİSYEN İŞLEM SİSTEMİ</strong></p>
+            <button class="dropdown-btn">
+                <i class="fas fa-tasks"></i> Genel İşlemler
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container" style="background-color: #111111">
+                <a href="A_KullanimKilavuzu"><i class="far fa-caret-square-right"></i> Kullanım Kılavuzu</a>
+                <a href="A_Ders_Programi"><i class="far fa-caret-square-right"></i> Ders Programı</a>
+                <a href="verilenders"><i class="far fa-caret-square-right"></i> Verilen Dersler</a>
+                <a href="Akademik_Takvim"><i class="far fa-caret-square-right"></i> Akademik Takvim</a>
+            </div>
+            <button class="dropdown-btn">
+                <i class="fas fa-map-marker-alt"></i> Sınav İşlemleri
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container" style="background-color: #111111">
+                <a href="notgiris"><i class="far fa-caret-square-right"></i> Not Girişi</a>
+                <a href="A_duyuru"><i class="far fa-caret-square-right"></i> Duyuru Yayınla</a>
+                <a href="devamsizlik_giris"><i class="far fa-caret-square-right"></i> Devamsızlık Durumu Girişi</a>
+            </div>
+            <button class="dropdown-btn">
+                <i class="fas fa-cubes"></i> Profil
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container" style="background-color: #111111">
+                <a href="A_profil"><i class="far fa-caret-square-right"></i> Profil Bilgileri</a>
+            </div>
+            <button class="dropdown-btn">
+                <i class="fas fa-cogs"></i> Kullanıcı İşlemleri
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container" style="background-color: #111111">
+                <a href="A_sifre_degistir"><i class="far fa-caret-square-right"></i> Şifre Değiştir</a>
+            </div>
+
+        </div>
+
+
+
+        <script>
+            /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+            var dropdown = document.getElementsByClassName("dropdown-btn");
+            var i;
+
+            for (i = 0; i < dropdown.length; i++) {
+                dropdown[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var dropdownContent = this.nextElementSibling;
+                    if (dropdownContent.style.display === "block") {
+                        dropdownContent.style.display = "none";
+                    } else {
+                        dropdownContent.style.display = "block";
+                    }
+                });
+            }
+        </script>
+
+
+    </div>
+    <div class="block">
+        @RenderBody()
+
+    </div>
+
+    <div style="margin-top:680px;margin-left:180px">
+        <hr />
+        <center> <p>ÖZCANLAR KOLEJ &copy;</p> </center>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>

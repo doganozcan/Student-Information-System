@@ -1,0 +1,45 @@
+﻿@model FİNAL_PROJE.Models.Tables.ogretmen
+@using FİNAL_PROJE.EKLENTİ
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Öğrenci Bilgi Sistemi</title>
+</head>
+<body>
+    <h2> Silinecek Akademisyenin Bilgileri</h2>
+    <hr />
+    <strong>Akademisyeni silmek istediğinizden eminmisiniz?</strong>
+    <div style="width:450px">
+        <table class="table table-hover table-light bordeer">
+            <thead>
+                <tr></tr>
+            </thead>
+            <tbody>
+            <td><strong>Adı:</strong>@(Model.ad)</td>
+            <tr></tr>
+            <td><strong>Soyadı</strong>:@(Model.soyad)</td>
+            <tr></tr>
+            <td><strong>Öğretmen ID:</strong>@(Model.ogretmen_ID)</td>
+            <tr></tr>
+            <td><strong>Verdiği Ders:</strong>@(Model.verdigidersadi)</td>
+            <tr></tr>
+            <td><strong>Ders ID:</strong>@(Model.ID_ders)</td>
+            <tr></tr>
+
+            </tbody>
+        </table>
+        @using (Html.BeginForm())
+        {
+            @Html.Submit("Sil", new { @class = "btn  btn-danger" })
+        }
+    </div>
+    <hr />
+    @Html.ActionLink("Anasayfa", "Admin_anasayfa", "ProgramSorumlusu")
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>

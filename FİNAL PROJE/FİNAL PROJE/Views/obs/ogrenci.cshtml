@@ -1,0 +1,63 @@
+﻿
+@{
+    Layout = "~/Views/Share/_LayoutPage1.cshtml";
+}
+
+@model FİNAL_PROJE.Models.ViewModel
+
+<div id="anasayfa">
+   
+    <div class="container">
+
+        <table class="table table-hover table-primary container">
+            <thead>
+            <th class="col-sm-8">YÖKSİS'e Kayıtlı Aktif Öğrenim Bilgileri</th>
+
+            </thead>
+            <tbody>
+                <tr>
+                    @foreach (var a in Model.YoksisListesi)
+                    {
+                        <td><strong>@("T.C Kimlik No:")</strong> @(a.ogrenci.tc)</td>
+                        <td><strong>@("Fakülte:")</strong> @(a.fakulte)</td>
+                        <td><strong>@("Kayıt Tarihi:")</strong> @(a.kayittarihi)</td>
+
+                    <tr></tr> @*ALT SATIRA GEÇMEK İÇİN*@
+                <td><strong>@("Adı:")</strong> @(a.ogrenci.ad) </td>
+                <td><strong>@("Bölüm:")</strong> @(a.bolum)</td>
+                <td><strong>@("Öğrenim Hakkı:")</strong> @(a.ogr_hakki)</td>
+                <tr></tr>
+                <td><strong>@("Soyadı:")</strong> @(a.ogrenci.soyad)</td>
+                <td><strong>@("Öğrenim Türü:")</strong> @(a.ogrenim_turu)</td>
+                <td><strong>@("Puan Türü:")</strong> @(a.giris_puanturu)</td>
+                <tr></tr>
+                <td><strong>@("Anne Adı:")</strong> @(a.ogrenci.anne_adi)</td>
+                <td><strong>@("Birim Türü:")</strong> @(a.birim_turu)</td>
+                <td><strong>@("Giriş Türü:")</strong> @(a.giristuru)</td>
+                <tr></tr>
+                <td><strong>@("Baba Adı:")</strong> @(a.ogrenci.baba_adi)</td>
+                <td><strong>@("Öğrenim Süresi:")</strong> @(a.ogrsuresi)</td>
+                <td><strong>@("Giris Puanı:")</strong> @(a.giris_puan)</td>
+                <tr></tr>
+                <td><strong>@("Doğum Tarihi:")</strong> @(a.ogrenci.dogumtarihi)</td>
+                <td><strong>@("Öğrenim Dili:")</strong> @(a.ogrdili)</td>
+                <td><strong>@("Not Sistemi:")</strong> @(a.notsistemi)</td>
+                <tr></tr>
+                <td><strong>@("Cinsiyet:")</strong> @(a.ogrenci.cinsiyet)</td>
+                <td><strong>@("Sınıfı:")</strong> @(a.sinif)</td>
+                <td><strong>@("Not Ortalaması:")</strong> @(a.not_ort)</td>
+                <tr></tr>
+                <td><strong>@("Uyruk:")</strong> @(a.ogrenci.uyruk)</td>
+                <td><strong>@("Öğrencilik Statüsü:")</strong> @(a.ogr_statusu)</td>
+                <td><strong>@("Aktif Dönem:")</strong> @(a.aktif_donem)</td>
+                <tr></tr>
+                <td><strong>@("Öğrenci No:")</strong> @(a.ogrenci.ogrencino)</td>
+                <td><strong>@("Hazırlık:")</strong> @(a.hazirlikdurumu)</td>
+                <td><strong>@("Yöksis Birim ID:")</strong> @(a.yoksis_ID)</td>
+            }
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+    </div>

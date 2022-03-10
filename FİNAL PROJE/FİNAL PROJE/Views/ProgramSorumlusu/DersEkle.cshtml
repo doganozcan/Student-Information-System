@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "DersEkle";
+    Layout = "~/Views/Share/_LayoutProgramSorumlusu.cshtml";
+}
+
+@model FİNAL_PROJE.Models.Tables.dersler
+@using FİNAL_PROJE.EKLENTİ
+<div id="anasayfa" style="margin-top:-50px">
+    <h2>Akademisyen Kaydı</h2>
+    <hr />
+    @using (Html.BeginForm())
+    {
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Dersin Adı</span>
+            @Html.TextBoxFor(x => x.dersadi, new { @class = "form-control ", placeholder = "Ders Adı", ari_describedy = "basic-addon1" })
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Kredisi</span>
+            @Html.TextBoxFor(x => x.kredi, new { @class = "form-control ", placeholder = "Kredi", ari_describedy = "basic-addon1" })
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Ders Dönemi</span>
+            @Html.TextBoxFor(x=>x.ders_donemi, new { @class = "form-control ", placeholder = "Ders Dönem", ari_describedy = "basic-addon1" })
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">AKTS</span>
+            @Html.TextBoxFor(x => x.akts, new { @class = "form-control ", placeholder = "AKTS", ari_describedy = "basic-addon1" })
+        </div>
+
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Dersin Verileceği Öğrenci No</span>
+            @Html.TextBoxFor(x => x.ogrencino, new { @class = "form-control ", placeholder = "Öğrenci No", ari_describedy = "basic-addon1" })
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Dersi Veren Öğretmen ID</span>
+            @Html.TextBoxFor(x => x.ogretmen_ID, new { @class = "form-control ", placeholder = "Öğretmen ID", ari_describedy = "basic-addon1" })
+        </div>
+
+        <hr />
+        @Html.Submit("KAYDET", new { @class = "btn  btn-light", style = "background-color:orange;margin-left:5px;width:100px" })
+    }
+
+</div>
